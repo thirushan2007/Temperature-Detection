@@ -1,0 +1,91 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+ .App{
+  font-family:serif;
+ }
+
+.back-home{
+  background-image: url(../assests/photo-1464618663641-bbdd760ae84a.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+
+}
+.weather-box-child{
+  width: 300px;
+  height: 400px;
+  background-image: url(../assests/photo-1558486012-817176f84c6d.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 7px;
+}
+.icons{
+  color: white;
+}
+.title-top{
+  color: white;
+  text-align: center;
+}
+.temp-show{
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.place-show{
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.maxi-mini{
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+
+}
+.humi-like{
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+
+}

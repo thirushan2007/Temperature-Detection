@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import App from "../App";
+import HomePage from "../pages/homepage";
 
 const MainRouter = () => {
   return (
     <Routes>
-      <Route path="/Temperature-Detection" Component={App} />
+      <Route path="/Temperature-Detection" Component={HomePage} />
     </Routes>
   );
 };
