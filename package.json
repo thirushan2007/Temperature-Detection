@@ -1,7 +1,7 @@
 {
-  "name": "weather",
+  "name": "Temperature",
   "version": "0.1.0",
-  "homepage": "https://thirushan2007.github.io/weather",
+  "homepage": "https://thirushan2007.github.io/Temperature-Detection",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
