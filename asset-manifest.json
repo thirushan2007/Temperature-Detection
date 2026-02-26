@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Temperature-Detection/static/css/main.6cc6d8b6.css",
-    "main.js": "/Temperature-Detection/static/js/main.9f9e8357.js",
+    "main.js": "/Temperature-Detection/static/js/main.88fbac55.js",
     "static/js/453.25c0b873.chunk.js": "/Temperature-Detection/static/js/453.25c0b873.chunk.js",
     "static/media/photo-1464618663641-bbdd760ae84a.jpg": "/Temperature-Detection/static/media/photo-1464618663641-bbdd760ae84a.656f095b4faf014c6393.jpg",
     "static/media/photo-1558486012-817176f84c6d.jpg": "/Temperature-Detection/static/media/photo-1558486012-817176f84c6d.472f5f6a748aa2cd9ae8.jpg",
     "index.html": "/Temperature-Detection/index.html",
     "main.6cc6d8b6.css.map": "/Temperature-Detection/static/css/main.6cc6d8b6.css.map",
-    "main.9f9e8357.js.map": "/Temperature-Detection/static/js/main.9f9e8357.js.map",
+    "main.88fbac55.js.map": "/Temperature-Detection/static/js/main.88fbac55.js.map",
     "453.25c0b873.chunk.js.map": "/Temperature-Detection/static/js/453.25c0b873.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6cc6d8b6.css",
-    "static/js/main.9f9e8357.js"
+    "static/js/main.88fbac55.js"
   ]
 }
