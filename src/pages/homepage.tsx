@@ -24,6 +24,7 @@ function HomePage() {
     const lon = params.coords.longitude;
     const key = process.env.REACT_APP_OPENWEATHER_KEY;
     if (!key) throw new Error("Missing REACT_APP_OPENWEATHER_KEY env var");
+    console.log("KEY:", process.env.REACT_APP_OPENWEATHER_KEY);
 
     const res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${key}`,
@@ -39,24 +40,56 @@ function HomePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  //   function getLocationAndFetchWeather() {
+  //     setError(null);
+  //     if (!("geolocation" in navigator)) {
+  //       setError("Geolocation is not supported by your browser.");
+  //       return;
+  //     }
+
+  //     setLoading(true);
+  //     navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //         const { latitude, longitude } = position.coords;
+  //         fetchWeather(latitude, longitude);
+  //       },
+  //       (err) => {
+  //         setLoading(false);
+  //         setError(err.message || "Unable to retrieve your location.");
+  //       },
+  //       { timeout: 30000 },
+  //     );
+  //   }
+
   function getLocationAndFetchWeather() {
     setError(null);
+
     if (!("geolocation" in navigator)) {
-      setError("Geolocation is not supported by your browser.");
+      // Fallback if geolocation not supported
+      fetchWeather(13.0827, 80.2707); // Chennai
       return;
     }
 
     setLoading(true);
+
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const { latitude, longitude } = position.coords;
         fetchWeather(latitude, longitude);
       },
       (err) => {
-        setLoading(false);
-        setError(err.message || "Unable to retrieve your location.");
+        console.warn("Geolocation error:", err.message);
+
+        // 🔥 Fallback to Chennai if location fails
+        fetchWeather(13.0827, 80.2707);
+
+        setError("Location access denied. Showing default city (Chennai).");
       },
-      { timeout: 10000 },
+      {
+        timeout: 15000,
+        enableHighAccuracy: false,
+        maximumAge: 0,
+      },
     );
   }
 
